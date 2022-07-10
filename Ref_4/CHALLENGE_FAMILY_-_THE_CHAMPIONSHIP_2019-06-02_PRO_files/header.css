@@ -1,0 +1,39 @@
+table.tableHeader{border:0;font-size:0.75rem;line-height:0.85rem;color:#FFFFFF;text-align:left;width:100%;height:42px}
+@media only screen and (min-width:800px){table.tableHeader{box-shadow:rgba(0,0,0, 0.52) 0px 2px 2px -2px}}
+#tableHeader{position:fixed;top:0;z-index:2000;background-color:#A81815}
+#divLanguage{padding:3px 1px 1px 0;position:absolute;right:0;top:0;text-align:right}
+#cboLanguage{background-color:#2C2C2C;color:#FFFFFF;padding:1px;margin:0;border-radius:2px;border:1px solid #505050;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font-size:0.75rem;width:100%}
+@media only screen and (max-width:640px){table.tableHeader b.sl{display:none}
+table.tableHeader select.sl{font-size:16px}
+#divLanguage{display:none}}
+#divDotMenu{width:50%;display:none}
+#divDotMenu > img{width:24px;height:24px;position:absolute;right:8px;top:50%;margin-top:-12px;cursor:pointer}
+#divDotMenuContent{background-color:#FFFFFF;position:fixed;top:0;height:100%;right:-100%;width:100%;z-index:5001;transition:right 0.5s;color:#2C2C2C;font-size:1rem;line-height:1.1rem;overflow:hidden}
+#divDotMenuContent a{color:#2C2C2C}
+body.showDotMenu{overflow:hidden}
+body.showDotMenu #divDotMenuContent{right:0}
+body.showDotMenu #divDotMenuContent > div.head{background-color:#A81815;height:42px;position:fixed;top:0;left:0;width:100%;z-index:2002}
+#divDotMenuContent > div.head > div.button{height:42px;width:42px;background-repeat:no-repeat;background-position:right 5px center;display:inline-block;cursor:pointer}
+#divDotMenuContent > div.head > div.button:nth-of-type(1){background-image:url('/graphics/arrowLeft.svg');background-size:32px 32px;float:left;display:none}
+#divDotMenuContent > div.head > div.button:nth-of-type(2){background-image:url('/graphics/closeRound.svg');background-size:20px 20px;float:right;margin-right:5px}
+#divDotMenuContent > div.head > #divDotMenuTitle{width:100%;text-align:center;color:#FFFFFF;font-size:1.1rem;padding-top:11px}
+#divDotMenuContent > div.names{position:absolute;right:0;width:100%;padding-left:10px;padding-right:10px;transition:right 0.5s}
+#divDotMenuContent > div.names > div{padding-top:12px;padding-bottom:10px;padding-right:36px;border-bottom:1px solid #CCCCCC;background-repeat:no-repeat;background-position:right 5px center;background-image:url('/graphics/arrowRight.svg');background-size:24px 24px;cursor:pointer}
+#divDotMenuContent > div.names > div:hover{background-color:#EEEEEE}
+#divDotMenuContent.showItem1 > div.names, #divDotMenuContent.showItem2 > div.names, #divDotMenuContent.showItem3 > div.names, #divDotMenuContent.showItem4 > div.names, #divDotMenuContent.showItem5 > div.names, #divDotMenuContent.showItem6 > div.names{right:100%}
+#divDotMenuContent > div.sections{padding:0 10px;position:absolute;width:100%;right:-100%;top:42px;bottom:0;overflow:auto;-webkit-overflow-scrolling:touch;transition:right 0.5s}
+#divDotMenuContent > div.sections > div{display:none}
+#divDotMenuContent.showItem1 > div.sections, #divDotMenuContent.showItem2 > div.sections, #divDotMenuContent.showItem3 > div.sections, #divDotMenuContent.showItem4 > div.sections, #divDotMenuContent.showItem5 > div.sections, #divDotMenuContent.showItem6 > div.sections{right:0}
+#divDotMenuContent.showItem1 > div.sections > div:nth-of-type(1){display:block}
+#divDotMenuContent.showItem2 > div.sections > div:nth-of-type(2){display:block}
+#divDotMenuContent.showItem3 > div.sections > div:nth-of-type(3){display:block}
+#divDotMenuContent.showItem4 > div.sections > div:nth-of-type(4){display:block}
+#divDotMenuContent.showItem5 > div.sections > div:nth-of-type(5){display:block}
+#divDotMenuContent.showItem6 > div.sections > div:nth-of-type(6){display:block}
+#divDotMenuContent.showItem1 > div.head > div:nth-child(1), #divDotMenuContent.showItem2 > div.head > div:nth-child(1), #divDotMenuContent.showItem3 > div.head > div:nth-child(1), #divDotMenuContent.showItem4 > div.head > div:nth-child(1), #divDotMenuContent.showItem5 > div.head > div:nth-child(1), #divDotMenuContent.showItem6 > div.head > div:nth-child(1){display:inline-block}
+#divDotMenuContent > div.sections > div > div{padding-top:12px;padding-bottom:10px}
+#divDotMenuContent > div.sections > div > div.link{padding-right:36px;border-bottom:1px solid #CCCCCC;cursor:pointer}
+#divDotMenuContent > div.sections > div > div.link > a{text-decoration:none}
+#divDotMenuContent > div.sections > div > div.link:hover{background-color:#EEEEEE}
+#divDotMenuContent > div.sections > div > div.link:last-child{border-bottom:0}
+@media only screen and (max-width:640px){#divDotMenu{display:block}}
