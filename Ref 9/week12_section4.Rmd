@@ -1,0 +1,177 @@
+---
+title: "Week12_Section4"
+author: "Ryan Long"
+date: "11/11/2019"
+output: word_document
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(broom)
+library(dplyr)
+library(tidyverse)
+library(modelr)
+library(plotly)
+library(ggpubr)
+library(pastecs)
+library(psych)
+library(gdata)
+library(tidyr)
+```
+  
+
+# Overall, write a coherent narrative that tells a story with the data as you complete this section.  
+## Summarize the problem statement you addressed.  
+  
+>Two contributing factors related to maintaining body weight are physical activity and eating nutritious foods. The question is to what degree does individual choices regarding physical activity and quality of nutrition aid the effort to prevent obesity?  
+>  
+A data set on Nutrition, Physical Activity and Obesity created by the Centers for Diease Control and Prevention was obtained from HealthData.gov. The raw data set was cleaned and prepared to contain the following variables for 2017 survey by State/Territory:  
+>  
+Obese: Percentage of Adults aged 18 years and older who have obesity.  
+NoActivity: Percentage of Adults who engage in no leisure-time physical activity.  
+Fruit1dy: Percentage of Adults consuming fruit less than one time daily.  
+Veg1dy: Percentage of Adults consuming fruit less than one time daily.  
+
+>The following were removed for the following reasons Puerto Rico (Outlier), Virgin Island (incomplete), and US Composite (non-represntative).  
+
+>The below depicts the data cleaning steps.  
+
+```{r Data Import}
+# Data Source: https://healthdata.gov/dataset/nutrition-physical-activity-and-obesity-behavioral-risk-factor-surveillance-system  
+
+#Import the raw data.  
+data<- read.csv("Nutrition__Physical_Activity__and_Obesity_-_Behavioral_Risk_Factor_Surveillance_System.csv")
+
+#Filter criteria to be applied to the data. The first filter will target the attributes related to obesity, activity, and nutrition. The second filter will include the most recent survey data. Prior years did not include nutrition data. The third filter will exclude all category strata and will only pull the total. 
+
+qfilt<-c("Percent of adults who engage in no leisure-time physical activity", "Percent of adults aged 18 years and older who have an overweight classification", "Percent of adults aged 18 years and older who have obesity", "Percent of adults who report consuming fruit less than one time daily", "Percent of adults who report consuming vegetables less than one time daily")
+yfilt<- "2017"
+tfilt<- "Total"
+
+#Apply Filters to appropriate fields.  
+
+f_data <- filter(data, Question %in% qfilt & YearEnd %in% yfilt & Total %in% tfilt)
+
+#Subset specific variables from data  
+
+sub_data <- data.frame(f_data$YearEnd,f_data$LocationDesc,f_data$LocationAbbr,f_data$Question,f_data$Data_Value)
+f_data<-drop.levels(sub_data)
+
+#Use Spread to arrange variables by State and remove NA (Virgin Islands had not data)  
+
+finaldata <- na.omit(spread(f_data, key = f_data.Question, value = f_data.Data_Value))
+
+#Clean up column names
+colnames(finaldata) <-c("YearEnd","LocDesc","LocAbbr","Overweight","Obese","NoActivity","Fruit1dy","Veg1dy")
+
+finaldata<- read.csv("finaldata.csv")
+
+# Final Clean up - Remove Column & Outliers
+finaldata<-finaldata[,-1]
+finaldata<-filter(finaldata, LocAbbr != "PR")
+finaldata<-filter(finaldata, LocAbbr != "US")
+```  
+
+## Summarize how you addressed this problem statement (the data used and the methodology employed).  
+>The cleaned data provided 52 data points for each of the above identified variables presented at percentages of survey respondents. Additionally data was maintained related to the year and state, however was not used for further analysis.  The normality of the distributions, plot the variable densities, calculate the correlation between the variables were reviewed before using linear models to determine the relationships between dependent and independent variables.
+
+```{r summary}
+str(finaldata )
+```
+
+> The following histograms provide a visualize depiction of the frequency of variable data. 
+
+```{r histogram}
+hist(finaldata$Obese,main="% Obesity of State/Territories",xlab="% Obesity")
+hist(finaldata$NoActivity,main="% of Inactive by State",xlab="% No Activity")
+hist(finaldata$Fruit1dy,main="% Individuals who consume <1 Fruit Per day by State",xlab="% < 1 Fruit Per Day")
+hist(finaldata$Veg1dy,main="% Individuals who consume <1 Vegetable Per day by State",xlab="% < 1 Vegetable Per Day")
+```
+
+> Density of the variable data is displayed below.  
+
+```{r shape}
+
+ggdensity(finaldata$Obese, 
+          main = "Density plot of Obesity",
+          xlab = "Obesity %")
+ggdensity(finaldata$NoActivity, 
+          main = "Density plot of NoActivity",
+          xlab = "Obesity %")
+ggdensity(finaldata$Fruit1dy, 
+          main = "Density plot of Fruit1dy",
+          xlab = "Obesity %")
+ggdensity(finaldata$Veg1dy, 
+          main = "Density plot of Veg1dy",
+          xlab = "Obesity %")
+
+```
+
+>Correlation between variables - For p-Values less than 0.05,reject the null hypothesis that the true correlation is zero (i.e. they are independent). Based on the results, reject the null hypothesis and conclude that Obesity is dependent on No Activity, Low Fruit consumption, and Low Vegetable consumption.  
+
+```{r cortest}
+cor(finaldata$NoActivity,finaldata$Obese)
+cor(finaldata$Fruit1dy,finaldata$Obese)
+cor(finaldata$Veg1dy,finaldata$Obese)
+```
+
+>Normality of the distributions - To determine normal distribution a p-value > 0.05 implies that the distribution of the data are not significantly different from normal distribution, or we can assume the normality. All p-values aside from Fruit are greater than 0.05, which means it is not normally distributed.  
+
+```{r Distribution}
+shapiro.test(finaldata$Obese)
+shapiro.test(finaldata$NoActivity)
+shapiro.test(finaldata$Fruit1dy)
+shapiro.test(finaldata$Veg1dy)
+```
+  
+
+>Correlation coefficient - Positive (closer to 1) means closer relationship, 0 means none, and negative (Closer to -1) indicates inverse relationship. Calculating the covariance in a matrix format allows interpretation of the relationship between multiple variables, in one summary output. The output indicates there is a positive relationship between Obese and % No Activity and % Less than 1 Fruit per day. A lower but still positive relationship exists between % Obese and % Less than 1 Vegetable per day. This is the weakest relationship between all variables.  
+
+```{r corcoeff}
+cor(finaldata[,5:8])
+```
+  
+>Skewness and Kurtosis of the variables - Obesity, No Activity and Vegetable are approximately symmetric while Fruit is moderately skewed. All but obesity are skewed right (positive). For kurtosis, all are generally centrally shaped with distinct tails that are not thin, but have broad, but dulled central peaks.  
+
+```{r skew&kurt}
+skew(finaldata[,5:8])
+kurtosi(finaldata[,5:8])
+```
+
+## Summarize the interesting insights that your analysis provided.  
+>Linear models were created for the obesity variable and compared to see if a model with multiple independent variables improved the fit. The Anova test indicates higher significance with the final model including more variables, impacting the obesity outcome. Additionally, the final model indicates higher significance (p value) on the variable, Percentage of Adults consuming fruit less than one time daily on Obesity. Veg had the next highest P value and finally the Activity Component. I'd summarize the data by stating the addage you can't outrun a poor diet, as in intake, or in this case poor intake of less than 1 fruit or vegetable a day impacts obesity more than not performing physical activity.  
+
+
+```{r linear model}
+test1 <- lm(Obese ~ NoActivity, data=finaldata)
+test2 <- lm(Obese ~ Fruit1dy, data=finaldata)
+test3 <- lm(Obese ~ Veg1dy, data=finaldata)
+test4 <- lm(Obese ~ NoActivity + Fruit1dy + Veg1dy, data=finaldata)
+
+anova(test1,test2,test3,test4)
+
+summary(test4)
+
+```
+
+> The following plots show varying degrees of positive relationship between all dependent/independent variable scenarios.  
+
+```{r 5}
+# Plot linear models for specific data
+ggplot(data=finaldata, aes(y=Obese, x=NoActivity))+
+  geom_point() +
+  geom_smooth(method="lm",se=FALSE)
+ggplot(data=finaldata, aes(y=Obese, x=Fruit1dy))+
+  geom_point() +
+  geom_smooth(method="lm",se=FALSE)
+ggplot(data=finaldata, aes(y=Obese, x=Veg1dy))+
+  geom_point() +
+  geom_smooth(method="lm",se=FALSE)
+```
+
+##  Summarize the implications to the consumer (target audience) of your analysis.   
+> The target audience of this analysis would be anyone concerned about limiting or preventing obesity. There were clear positive relationships between the rate of obesity of respondents and the surveyed independent variable conditions (physical activity, fruit and vegetable consumption). The lack of fruit in the group surveyed as obese was the most statistically significant variable.  
+
+##  Discuss the limitations of your analysis and how you, or someone else, could improve or build on it.  
+>Two major limitations from the data exist. The first being genetic predispositions to obesity are not surveyed for. Regardless of the relationship between obesity, physical activity, and nutrition, an individual's genetic or inherent bias towards obesity should be considered. Additionally, these the nutrition data points collected were only collected in 2017, not prior or subseqent years.  
