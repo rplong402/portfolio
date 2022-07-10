@@ -1,0 +1,30 @@
+.RRPublish > div.Tiles > div > div{background-color:#A81815 !important}
+.RRPublish table.MainTable{font-size:14.5px;letter-spacing:-0.1pt}
+.RRPublish table.MainTable.FilterCount2 th{top:68px}
+.RRPublish table.MainTable.FilterCount3 th{top:104px}
+.RRPublish table.MainTable.FilterCount4 th{top:140px}
+@media only screen and (min-width:800px){.RRPublish div.MainDiv{padding-left:1% !important;padding-right:1% !important;padding:10px 0px 5px 0px}}
+@media only screen and (min-width:641px){.RRPublish div.SelectorParent{top:84px !important;z-index:100 !important}
+.RRPublish table.MainTable > thead > tr > th{position:-webkit-sticky;position:sticky;z-index:1}
+.RRPublish table.MainTable > thead > tr:nth-child(1) > th{top:84px}
+.RRPublish table.MainTable > thead > tr:nth-child(2) > th{top:110px}
+.RRPublish table.MainTable > thead > tr:nth-child(3) > th{top:136px}
+.RRPublish table.MainTable > thead > tr:nth-child(4) > th{top:162px}
+.RRPublish table.MainTable > thead > tr:nth-child(5) > th{top:188px}
+.RRPublish table.MainTable.HasSelector > thead > tr:nth-child(1) > th{top:128px}
+.RRPublish table.MainTable.HasSelector > thead > tr:nth-child(2) > th{top:154px}
+.RRPublish table.MainTable.HasSelector > thead > tr:nth-child(3) > th{top:180px}
+.RRPublish table.MainTable.HasSelector > thead > tr:nth-child(4) > th{top:206px}
+.RRPublish table.MainTable.HasSelector > thead > tr:nth-child(5) > th{top:232px}
+.RRPublish table.MainTable.HasSelectorLabel > thead > tr:nth-child(1) > th{top:138px}
+.RRPublish table.MainTable.HasSelectorLabel > thead > tr:nth-child(2) > th{top:164px}
+.RRPublish table.MainTable.HasSelectorLabel > thead > tr:nth-child(3) > th{top:190px}
+.RRPublish table.MainTable.HasSelectorLabel > thead > tr:nth-child(4) > th{top:216px}
+.RRPublish table.MainTable.HasSelectorLabel > thead > tr:nth-child(5) > th{top:242px}}
+@media only screen and (max-width:640px){table.divDetailsParent div.divCloseBar{background-color:#A81815 !important;background-image:url('/graphics/arrowLeft.svg') !important;color:#FFFFFF !important}
+.RRPublish table.MainTable th{position:-webkit-sticky;position:sticky;top:42px;z-index:1}}
+.RRPublish div.RRPInfoText{max-width:1150px}
+#RRReg_divTest{width:100%;background-color:#CC3333;border:1px solid #888888;padding-left:20px;padding-bottom:7px;color:#FFFFFF;font-weight:bold;text-align:left}
+#RRReg_divTest p{margin:8px 0 0 0;font-size:2em}
+#RRReg_divTest ul{margin:6px 0}
+#RRReg_divTest li{margin:4px 0}

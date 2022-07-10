@@ -1,0 +1,14 @@
+div.EventHead{position:relative}
+div.EventHead > img{width:100%;max-width:1150px;max-height:212px;vertical-align:top}
+div.EventHead > img:first-of-type{position:fixed;z-index:-1}
+div.EventHead > img:last-of-type{visibility:hidden}
+div.EventHead > div{width:100%;position:absolute;bottom:0;background-color:#FFFFFF;opacity:0.9;padding:4px 0 3px 19px;color:#2C2C2C;overflow:hidden;text-align:left}
+div.EventHead > div > b:first-child{margin-left:-13px;font-size:1em;line-height:1.5em}
+div.EventHead > div > b:last-Child{font-size:1.5em;line-height:1.12em}
+div.EventHeadBackground{background-position:center;width:100%;background-repeat:no-repeat;background-size:cover;position:absolute;height:212px;left:0;right:0;z-index:-50;margin-top:1px}
+@media only screen and (min-width:1150px){div.EventHead{min-height:150px;margin-top:1px;padding-bottom:1px}}
+@media only screen and (max-width:1150px){div.EventHeadBackground{display:none}
+div.EventHead > div{position:static;opacity:1}}
+@media only screen and (max-width:640px){div.EventHead{font-size:0.8em;padding-bottom:0;border-bottom:1px solid #CCCCCC}
+div.EventHead > div{padding:1px;text-align:center;background-color:#F5F5F5}
+div.EventHead > div > b{margin:0}}
