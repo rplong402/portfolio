@@ -1,6 +1,7 @@
 ## Welcome Ryan Long's Data Science Portfolio
 
-Generic readme content here
+## About
+
 
 ### Project 1
 [Project 1](https://github.com/rplong402/portfolio/tree/main/Ref_01)
@@ -32,6 +33,7 @@ Generic readme content here
 ### Project 10
 [Project 10](https://github.com/rplong402/portfolio/tree/main/Ref_10)
 
+### [Contact](mailto:rlong@my365.bellevue.edu)
 
 
 ## Welcome to GitHub Pages
