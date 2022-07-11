@@ -5,7 +5,20 @@ Generic readme content here
 ### Project 1
 [Project 1](https://github.com/rplong402/portfolio/tree/main/Ref_01)
 
+### Project 2
+[Project 2](https://github.com/rplong402/portfolio/tree/main/Ref_02)
 
+### Project 3
+[Project 3](https://github.com/rplong402/portfolio/tree/main/Ref_03)
+
+### Project 4
+[Project 4](https://github.com/rplong402/portfolio/tree/main/Ref_04)
+
+### Project 5
+[Project 5](https://github.com/rplong402/portfolio/tree/main/Ref_05)
+
+### Project 6
+[Project 6](https://github.com/rplong402/portfolio/tree/main/Ref_06)
 
 
 
