@@ -1,4 +1,4 @@
-## Welcome to the Ryan Long's Data Science Portfolio
+## Welcome Ryan Long's Data Science Portfolio
 
 Generic readme content here
 
@@ -20,6 +20,17 @@ Generic readme content here
 ### Project 6
 [Project 6](https://github.com/rplong402/portfolio/tree/main/Ref_06)
 
+### Project 7
+[Project 7](https://github.com/rplong402/portfolio/tree/main/Ref_07)
+
+### Project 8
+[Project 8](https://github.com/rplong402/portfolio/tree/main/Ref_08)
+
+### Project 9
+[Project 9](https://github.com/rplong402/portfolio/tree/main/Ref_09)
+
+### Project 10
+[Project 10](https://github.com/rplong402/portfolio/tree/main/Ref_10)
 
 
 
