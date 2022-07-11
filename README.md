@@ -1,4 +1,4 @@
-# Welcome Ryan Long's Data Science Portfolio
+# Ryan Long's Data Science Portfolio
 ## About
 
 
