@@ -3,7 +3,7 @@
 Generic readme content here
 
 ### Project 1
-[Project 1]([url](https://github.com/rplong402/portfolio/tree/main/Ref_01))
+[Project 1]([url](https://github.com/rplong402/portfolio/tree/main/Ref_01)
 
 
 
