@@ -1,4 +1,4 @@
-# Ryan Long's Data Science Portfolio
+# RPL's Data Science Portfolio
 
 ## About
 This webpage contains links to various data science projects accumulated over the past few years highlighting I've performed. Projects range in complexity but cover a range from programming and modeling to visualizations and presentations. Python, R, Power BI were the langagues and programs were primarily used throughout the development of the below listing of projets.
