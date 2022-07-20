@@ -12,6 +12,7 @@ The objective of this project is to predict running pace of a youth cross countr
 
 ### Project 2
 Predicting Fraud with XGBoost - Python  
+  
 The objective of this project is to use an XGBoost model to predict fraudulent credit card transactions to prevent losses to financial institutions.  
   
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_02){:target="_blank"}
