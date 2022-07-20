@@ -6,7 +6,7 @@ This webpage contains links to various data science projects accumulated over th
 ### Project 1
 Female Middle School Cross Country Performance Prediction Using Multiple Regression - Python
 Project summary goes here...  
-[Link](https://github.com/rplong402/portfolio/tree/main/Project_01)
+[Link](https://github.com/rplong402/portfolio/tree/main/Project_01)  
 [text-to-highlight](https://github.com/rplong402/portfolio/tree/main/Project_01){:target="\_blank"}
 
 ### Project 2
