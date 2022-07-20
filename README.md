@@ -5,6 +5,7 @@ This webpage contains links to various data science projects accumulated over th
 
 ### Project 1
 Female Middle School Cross Country Performance Prediction Using Multiple Regression - Python  
+  
 The objective of this project is to predict running pace of a youth cross country participant using a model to calculate a pace (dependent) given several criteria (independent) obtained from seasonal data of a female middle school cross-country season. This information will aid runners, coaches, and parents to focus on healthy and holistic training outcomes.  
 
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_01){:target="_blank"}  
