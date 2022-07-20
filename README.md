@@ -4,12 +4,12 @@
 This webpage contains links to various data science projects accumulated over the past few years highlighting work I've performed. Projects range in complexity but span general data science topics such as programming and modeling to visualizations and presentations. Python, R, Power BI were the langagues and programs primarily used throughout the development of the below listing of projets.
 
 ### Project 1
-Female Middle School Cross Country Performance Prediction Using Multiple Regression - Python
+Female Middle School Cross Country Performance Prediction Using Multiple Regression - Python  
 Project summary goes here...  
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_01)  
 
-[go](http://stackoverflow.com){:target="_blank" rel="noopener"}
-[text-to-highlight](http://stackoverflow.com){:target="\_blank"}
+[go](http://stackoverflow.com){:target="_blank" rel="noopener"}  
+[text-to-highlight](http://stackoverflow.com){:target="\_blank"}  
 
 ### Project 2
 Predicting Fraud with XGBoost - Python  
