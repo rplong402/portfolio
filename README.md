@@ -19,42 +19,58 @@ The objective of this project is to use an XGBoost model to predict fraudulent c
 
 ### Project 3
 Predicting Employee Attrition with Logistic Regression - Python  
+
 Project summary goes here...  
+
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_03){:target="_blank"}
 
 ### Project 4
 Triathlon Championship Database - Python  
+
 Project summary goes here...  
+
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_04){:target="_blank"}
 
 ### Project 5
 Predicting StarCraft Ladder Leagues using Decision Tree Classifier and Random Forest models - Python  
+
 Project summary goes here...  
+
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_05){:target="_blank"}
 
 ### Project 6
 Predicting Emergency Room Utilization using Logistic Regression - Python & R  
+
 Project summary goes here...  
+
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_06){:target="_blank"}
 
 ### Project 7
 Data Visualization Examples - Python, R, PowerBI  
+
 Project summary goes here...  
+
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_07){:target="_blank"}
 
 ### Project 8
 Data Visualization Storytelling - Python, R, PowerBI, PowerPoint, Canva  
+
 Project summary goes here...  
+
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_08){:target="_blank"}
 
 ### Project 9
 Health Data Analysis in R Data Visualization Examples  
+
 Project summary goes here...  
+
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_09){:target="_blank"}
 
 ### Project 10
 Weather Forecast Program - Python  
+
 Project summary goes here...  
+
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_10){:target="_blank"}
 
 
