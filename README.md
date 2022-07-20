@@ -76,4 +76,4 @@ User selects either zip code, city, or stops the program. Next prompt asks user 
 
 
 ## Contact   
-[Contact](mailto:rlong@my365.bellevue.edu)
+[Email Author](mailto:rlong@my365.bellevue.edu)
