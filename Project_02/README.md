@@ -1,5 +1,4 @@
 # Project 2 README
-#README
 
 PROJECT NAME:	Predicting Fraud with XGBoost  
 AUTHOR:	Ryan Long  
