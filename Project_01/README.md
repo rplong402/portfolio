@@ -10,4 +10,3 @@ OBJECTIVE:	The objective of this project is to predict running pace of a youth c
 
 
 [Back to Portfolio Page](https://rplong402.github.io/portfolio/)
-
