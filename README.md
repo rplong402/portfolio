@@ -8,7 +8,7 @@ Female Middle School Cross Country Performance Prediction Using Multiple Regress
 Project summary goes here...  
 [Link](https://github.com/rplong402/portfolio/tree/main/Project_01)  
 
-<a href="https://github.com/rplong402/portfolio/tree/main/Project_01" target="_blank">New Tab</a>
+[go](http://stackoverflow.com){:target="_blank" rel="noopener"}
 
 ### Project 2
 Predicting Fraud with XGBoost - Python  
