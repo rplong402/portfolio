@@ -59,4 +59,5 @@ Project summary goes here...
 
 
 
-### [Contact](mailto:rlong@my365.bellevue.edu)
+## Contact   
+[Contact](mailto:rlong@my365.bellevue.edu)
